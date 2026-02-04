@@ -10,16 +10,13 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 
-        /* 모든 폰트 두께를 Medium(500)으로 통일하여 시각적 안정감 부여 */
         body {
             font-family: 'Noto Sans KR', sans-serif;
             font-weight: 500;
             word-break: keep-all;
             color: #334155;
-            /* Slate 700 */
         }
 
-        /* 눈이 편안한 세이지 & 슬레이트 테마 색상 설정 */
         .theme-bg {
             background-color: #f8fafc;
         }
@@ -36,7 +33,6 @@
             background-color: #f1f5f9;
         }
 
-        /* 인포그래픽 점선 효과 (상단에서 하단으로 흐르는 타임라인) */
         .step-line::before {
             content: '';
             position: absolute;
@@ -73,11 +69,9 @@
                 <i class="fa-solid fa-graduation-cap mr-2 text-slate-400"></i>
                 <span class="text-sm md:text-base font-medium">"전국 80개 대학 학생들이 선택한 특별한 구성"</span>
             </div>
-
             <h2 class="text-3xl md:text-4xl leading-tight mb-12 tracking-tight text-slate-800 font-medium">
                 한빛+ <span class="accent-green">전자책 공동구매 혜택</span>
             </h2>
-
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-point p-12 rounded-[2.5rem] border border-slate-200 flex flex-col items-center">
                     <div
@@ -103,7 +97,6 @@
 
     <section class="py-24 px-5 max-w-screen-md mx-auto">
         <h3 class="text-2xl text-center mb-20 text-slate-800 font-medium">구매 프로세스</h3>
-
         <div class="relative space-y-16">
 
             <div class="relative flex items-start step-line">
@@ -117,8 +110,11 @@
                         창에서 원하는 도서와 정보를 입력해 주세요. 확인 후 전용 할인 쿠폰을 발급해 드립니다.</p>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6jxQDC7o5dFXdtan9DhgQlNQJYmuuQqYwLHSeGafuzIA1og/viewform?usp=header"
                         target="_blank"
-                        class="flex items-center justify-center bg-slate-800 text-white w-full py-5 rounded-2xl hover:bg-slate-700 transition-all font-medium">
-                        <i class="fa-solid fa-pen-to-square mr-2 text-xl"></i> 주문 정보 입력하기 (새 창)
+                        class="flex items-center justify-center bg-slate-800 text-white w-full py-4 px-2 rounded-2xl hover:bg-slate-700 transition-all font-medium">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-pen-to-square text-lg shrink-0"></i>
+                            <span class="text-base md:text-lg whitespace-nowrap">주문 정보 입력하기 (새 창)</span>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -166,11 +162,13 @@
                 <div class="ml-8 flex-1 bg-slate-800 p-10 rounded-3xl shadow-xl text-white">
                     <h4 class="text-xl mb-3 font-medium text-slate-100">부가서비스 이용</h4>
                     <p class="text-slate-300 text-base md:text-lg leading-relaxed mb-8 font-medium">구매 완료! 발행된
-                        <strong>할인쿠폰이 정상적으로 등록</strong>되어야 부가서비스를 이용하실 수 있습니다. 아래 사이트에서 최고의 학습 환경을 누리세요.
-                    </p>
+                        <strong>할인쿠폰이 정상적으로 등록</strong>되어야 부가서비스를 이용하실 수 있습니다. 아래 사이트에서 최고의 학습 환경을 누리세요.</p>
                     <a href="http://addon.hanbit.co.kr/" target="_blank"
-                        class="flex items-center justify-center bg-white text-slate-800 w-full py-5 rounded-2xl hover:bg-slate-100 transition-all font-medium">
-                        <i class="fa-solid fa-external-link mr-2 text-lg text-green-700"></i> 부가서비스 사이트 바로가기
+                        class="flex items-center justify-center bg-white text-slate-800 w-full py-4 px-2 rounded-2xl hover:bg-slate-100 transition-all font-medium border border-slate-100">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-external-link text-lg text-green-700 shrink-0"></i>
+                            <span class="text-base md:text-lg whitespace-nowrap">부가서비스 사이트 바로가기</span>
+                        </div>
                     </a>
                 </div>
             </div>
