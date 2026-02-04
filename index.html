@@ -4,232 +4,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>한빛+ 전자책 공동구매 혜택</title>
+    <title>🎉 한빛+ 전자책 갓생 공동구매 🎉</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@600;800&display=swap');
 
-        /* Pretendard 폰트 사용: 깔끔하고 가독성 좋음 */
         body {
             font-family: 'Pretendard', sans-serif;
-            font-weight: 400;
-            /* 기본 폰트 두께 조절 */
+            font-weight: 600;
             word-break: keep-all;
-            color: #374151;
-            /* Dark Gray - 텍스트 가독성 */
-            line-height: 1.6;
-            /* 줄 간격 조절 */
+            color: #2d3748;
+            background-color: #fff9f0;
+            /* 따뜻한 아이보리 파스텔 배경 */
         }
 
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-weight: 700;
-            /* 제목 폰트 두께 강조 */
-            color: #1a202c;
-            /* Blackish - 제목 색상 강조 */
+        /* 둥둥 떠다니는 애니메이션 */
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-10px) rotate(5deg);
+            }
+
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
         }
 
-        /* 메인 컬러 팔레트: 학구적이면서도 활기찬 느낌의 블루 그린 & 차분한 그레이 */
-        .theme-bg {
-            background-color: #f9fafb;
-            /* Light Gray Background */
+        .emoji-float {
+            animation: float 3s ease-in-out infinite;
+            display: inline-block;
         }
 
-        .accent-primary {
-            color: #06b6d4;
-            /* Cyan 500 - 활기찬 블루 그린 */
+        /* 무지개빛 그라데이션 헤더 */
+        .header-rainbow {
+            background: linear-gradient(120deg, #ff9a9e 0%, #fecfef 50%, #a1c4fd 100%);
+            border-radius: 0 0 50px 50px;
+            box-shadow: 0 15px 30px rgba(255, 154, 158, 0.2);
         }
 
-        .bg-primary {
-            background-color: #06b6d4;
+        /* 카드별 포인트 컬러 */
+        .card-pink {
+            border: 4px solid #ffd1d1;
+            background-color: #fff5f5;
         }
 
-        .bg-card {
-            background-color: #ffffff;
+        .card-yellow {
+            border: 4px solid #ffec99;
+            background-color: #fff9db;
         }
 
-        .bg-point {
-            background-color: #ecfeff;
-            /* Light Cyan */
+        .card-blue {
+            border: 4px solid #a5d8ff;
+            background-color: #e7f5ff;
         }
 
-        /* 혜택 카드 배경 */
-
-        /* 헤더 배경에 그라데이션 추가 */
-        .header-bg {
-            background: linear-gradient(to right, #0891b2, #06b6d4);
-            /* Teal to Cyan */
-            color: #ffffff;
+        .card-green {
+            border: 4px solid #b2f2bb;
+            background-color: #ebfbee;
         }
 
-        .header-bg h1 {
-            color: #ffffff;
+        .card-purple {
+            border: 4px solid #e5dbff;
+            background-color: #f3f0ff;
         }
 
-        .header-bg .on-air {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: #ffffff;
-        }
-
-        /* 프로세스 인포그래픽 점선 효과 (타임라인) */
+        /* 타임라인 커스텀 */
         .step-line::before {
             content: '';
             position: absolute;
-            left: 20px;
-            top: 45px;
-            bottom: -25px;
-            width: 2px;
-            border-left: 2px dashed #a3a3a3;
-            /* Gray dashed line */
+            left: 24px;
+            top: 60px;
+            bottom: -40px;
+            width: 4px;
+            background: linear-gradient(to bottom, #ff9a9e, #a1c4fd);
             z-index: 0;
+            border-radius: 2px;
         }
 
         .step-last::before {
             display: none;
         }
 
-        /* 버튼 호버 효과 강화 */
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(6, 182, 212, 0.3);
-        }
-
-        .btn-secondary:hover {
-            background-color: #f0f9ff;
-            /* Light blue on hover */
-            transform: translateY(-1px);
+        /* 버튼 통통 튀는 효과 */
+        .btn-bounce:active {
+            transform: scale(0.95);
         }
     </style>
 </head>
 
-<body class="theme-bg">
+<body>
 
-    <header class="header-bg py-5">
-        <div class="max-w-screen-md mx-auto px-5 flex justify-between items-center">
-            <h1 class="text-2xl tracking-tight font-bold">한빛+ <span class="font-medium">공동구매</span></h1>
-            <div class="flex items-center gap-2 on-air px-4 py-1 rounded-full text-xs font-medium">
-                <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-                <span class="uppercase tracking-wider">Live Event</span>
-            </div>
+    <header class="header-rainbow py-12 px-5 text-center relative overflow-hidden">
+        <div class="absolute top-5 left-10 text-4xl emoji-float" style="animation-delay: 0s;">🎓</div>
+        <div class="absolute top-20 right-10 text-4xl emoji-float" style="animation-delay: 1s;">📖</div>
+        <div class="absolute bottom-5 left-20 text-4xl emoji-float" style="animation-delay: 0.5s;">✍️</div>
+
+        <div class="max-w-screen-md mx-auto relative z-10">
+            <span
+                class="bg-white/40 backdrop-blur-sm px-4 py-1 rounded-full text-sm font-bold text-pink-600 mb-4 inline-block">
+                🔥 에브리타임 핫이슈 🔥
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-white drop-shadow-md">
+                한빛+ 갓생 공구 <span class="emoji-float">🚀</span>
+            </h1>
+            <p class="text-lg md:text-xl text-white font-bold opacity-90">
+                대학생 전용! 이번 학기 학점은 전자책으로 챙기자 🐥
+            </p>
         </div>
     </header>
 
-    <section class="py-20 px-5 text-center bg-white border-b border-gray-100 shadow-sm">
-        <div class="max-w-screen-md mx-auto">
-            <div
-                class="inline-flex items-center bg-sky-100 text-sky-700 px-6 py-2 rounded-full mb-8 text-sm font-semibold shadow-inner">
-                <i class="fa-solid fa-graduation-cap mr-2"></i>
-                <span>"전국 80개 대학 학생들이 선택한 특별한 구성"</span>
+    <section class="py-16 px-5 max-w-screen-md mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="card-pink p-10 rounded-[40px] shadow-xl text-center transform hover:-rotate-2 transition">
+                <div class="text-6xl mb-4">💸</div>
+                <h3 class="text-2xl font-extrabold text-pink-600">통장 지킴이!<br><span class="text-5xl text-pink-500">15%
+                        할인</span></h3>
             </div>
-
-            <h2 class="text-3xl md:text-4xl leading-tight mb-12 tracking-tight">
-                한빛+ <span class="accent-primary">전자책 공동구매 혜택</span>
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div
-                    class="bg-card p-8 md:p-12 rounded-3xl border border-gray-200 flex flex-col items-center shadow-md">
-                    <div
-                        class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mb-6 text-white text-3xl shadow-lg">
-                        <i class="fa-solid fa-tags"></i>
-                    </div>
-                    <p class="text-gray-500 text-xs uppercase tracking-widest mb-2">Price Benefit</p>
-                    <p class="text-2xl md:text-3xl font-bold">정가 대비 <br><span
-                            class="accent-primary text-4xl md:text-5xl">15% 할인</span></p>
-                </div>
-                <div
-                    class="bg-card p-8 md:p-12 rounded-3xl border border-gray-200 flex flex-col items-center shadow-md">
-                    <div
-                        class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mb-6 text-white text-3xl shadow-lg">
-                        <i class="fa-solid fa-lightbulb"></i>
-                    </div>
-                    <p class="text-gray-500 text-xs uppercase tracking-widest mb-2">Study Bonus</p>
-                    <p class="text-2xl md:text-3xl font-bold">부가 학습 자료 <br><span
-                            class="accent-primary text-4xl md:text-5xl">무료 제공</span></p>
-                </div>
+            <div class="card-blue p-10 rounded-[40px] shadow-xl text-center transform hover:rotate-2 transition">
+                <div class="text-6xl mb-4">🎁</div>
+                <h3 class="text-2xl font-extrabold text-blue-600">학습 꿀템들!<br><span class="text-5xl text-blue-500">자료
+                        무료</span></h3>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-5 max-w-screen-md mx-auto">
-        <h3 class="text-2xl text-center mb-20">구매 프로세스</h3>
+    <section class="py-10 px-5 max-w-screen-md mx-auto">
+        <h2 class="text-3xl text-center font-extrabold mb-20 text-gray-800">
+            🌈 신청부터 이용까지 5단계!
+        </h2>
 
         <div class="relative space-y-16">
 
             <div class="relative flex items-start step-line">
                 <div
-                    class="z-10 bg-primary w-10 h-10 rounded-full flex items-center justify-center text-white shrink-0 text-lg shadow-md">
+                    class="z-10 bg-yellow-400 w-14 h-14 rounded-full flex items-center justify-center text-white shrink-0 text-2xl font-black shadow-lg border-4 border-white">
                     1</div>
-                <div class="ml-8 flex-1 bg-card p-8 rounded-2xl shadow-sm border border-gray-100">
-                    <span class="text-gray-400 text-[11px] tracking-widest uppercase mb-2 block">Step 1</span>
-                    <h4 class="text-xl mb-4">주문 정보 입력 및 신청</h4>
-                    <p class="text-gray-700 text-base md:text-lg leading-relaxed mb-8">아래 버튼을 클릭하여 나타나는 새 창에서 원하는 도서와
-                        정보를 입력해 주세요. 확인 후 전용 할인 쿠폰을 발급해 드립니다.</p>
+                <div class="ml-6 flex-1 card-yellow p-8 rounded-[30px] shadow-lg">
+                    <h4 class="text-2xl font-extrabold mb-4 text-yellow-700">정보 입력하기 📝</h4>
+                    <p class="text-yellow-900 mb-8 font-bold leading-relaxed">
+                        아래 버튼을 눌러 공동구매 신청서를 작성해주세요!<br>
+                        정보를 잘 적어야 쿠폰이 정확히 배송됩니다 🚚
+                    </p>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6jxQDC7o5dFXdtan9DhgQlNQJYmuuQqYwLHSeGafuzIA1og/viewform?usp=header"
                         target="_blank"
-                        class="btn-primary flex items-center justify-center bg-primary text-white w-full py-4 rounded-xl shadow-md transition ease-in-out duration-300">
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-pen-to-square text-lg shrink-0"></i>
-                            <span class="text-base md:text-lg whitespace-nowrap font-semibold">주문 정보 입력하기 (새 창)</span>
-                        </div>
+                        class="btn-bounce flex items-center justify-center bg-yellow-400 text-yellow-900 w-full py-5 rounded-2xl font-black text-xl shadow-lg border-b-8 border-yellow-600 hover:translate-y-1 hover:border-b-4 transition-all">
+                        <i class="fa-solid fa-hand-pointer mr-3"></i> 신청서 쓰러 가기!
                     </a>
                 </div>
             </div>
 
             <div class="relative flex items-start step-line">
                 <div
-                    class="z-10 bg-white border-2 border-primary w-10 h-10 rounded-full flex items-center justify-center text-primary shrink-0 text-lg">
+                    class="z-10 bg-pink-400 w-14 h-14 rounded-full flex items-center justify-center text-white shrink-0 text-2xl font-black shadow-lg border-4 border-white">
                     2</div>
-                <div class="ml-8 flex-1 bg-card p-8 rounded-2xl shadow-sm border border-gray-100">
-                    <span class="text-gray-400 text-[11px] tracking-widest uppercase mb-2 block">Step 2</span>
-                    <h4 class="text-xl mb-4">할인쿠폰 발급 완료</h4>
-                    <p class="text-gray-700 text-base md:text-lg">입력하신 연락처로 전용 할인 쿠폰 번호가 발송됩니다.</p>
+                <div class="ml-6 flex-1 card-pink p-8 rounded-[30px] shadow-lg">
+                    <h4 class="text-2xl font-extrabold mb-2 text-pink-700">쿠폰 도착! 💌</h4>
+                    <p class="text-pink-900 font-bold">작성하신 번호로 할인 쿠폰이 슝~ 날아갑니다.</p>
                 </div>
             </div>
 
             <div class="relative flex items-start step-line">
                 <div
-                    class="z-10 bg-white border-2 border-primary w-10 h-10 rounded-full flex items-center justify-center text-primary shrink-0 text-lg">
+                    class="z-10 bg-purple-400 w-14 h-14 rounded-full flex items-center justify-center text-white shrink-0 text-2xl font-black shadow-lg border-4 border-white">
                     3</div>
-                <div class="ml-8 flex-1 bg-card p-8 rounded-2xl shadow-sm border border-gray-100">
-                    <span class="text-gray-400 text-[11px] tracking-widest uppercase mb-2 block">Step 3</span>
-                    <h4 class="text-xl mb-4">한빛+ 사이트 가입</h4>
-                    <p class="text-gray-700 text-base md:text-lg">전자책 열람 및 쿠폰 사용을 위해 공식 사이트 가입이 필요합니다.</p>
-                    <a href="https://www.hanbit.co.kr/" target="_blank"
-                        class="btn-secondary text-primary text-base mt-4 inline-block underline underline-offset-4 font-semibold hover:no-underline transition">공식
-                        홈페이지 가기 <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i></a>
+                <div class="ml-6 flex-1 card-purple p-8 rounded-[30px] shadow-lg">
+                    <h4 class="text-2xl font-extrabold mb-2 text-purple-700">회원가입 하기 👤</h4>
+                    <p class="text-purple-900 font-bold mb-4">한빛+ 사이트에 가입하고 로그인해주세요!</p>
+                    <a href="https://www.hanbit.co.kr/" target="_blank" class="text-purple-600 underline font-black">한빛
+                        공식몰 이동하기 💨</a>
                 </div>
             </div>
 
             <div class="relative flex items-start step-line">
                 <div
-                    class="z-10 bg-white border-2 border-primary w-10 h-10 rounded-full flex items-center justify-center text-primary shrink-0 text-lg">
+                    class="z-10 bg-blue-400 w-14 h-14 rounded-full flex items-center justify-center text-white shrink-0 text-2xl font-black shadow-lg border-4 border-white">
                     4</div>
-                <div class="ml-8 flex-1 bg-card p-8 rounded-2xl shadow-sm border border-gray-100">
-                    <span class="text-gray-400 text-[11px] tracking-widest uppercase mb-2 block">Step 4</span>
-                    <h4 class="text-xl mb-4">쿠폰 등록 및 구매</h4>
-                    <p class="text-gray-700 text-base md:text-lg">마이페이지 > 쿠폰등록 메뉴에서 코드를 입력하고 할인가로 구매하세요.</p>
+                <div class="ml-6 flex-1 card-blue p-8 rounded-[30px] shadow-lg">
+                    <h4 class="text-2xl font-extrabold mb-2 text-blue-700">할인 구매! 🛒</h4>
+                    <p class="text-blue-900 font-bold">마이페이지에서 쿠폰을 등록하고 저렴하게 구매하세요!</p>
                 </div>
             </div>
 
             <div class="relative flex items-start step-last">
                 <div
-                    class="z-10 bg-primary w-10 h-10 rounded-full flex items-center justify-center text-white shrink-0 text-xl shadow-lg animate-bounce">
-                    <i class="fa-solid fa-check"></i>
-                </div>
-                <div class="ml-8 flex-1 bg-primary p-10 rounded-2xl shadow-xl text-white">
-                    <h4 class="text-xl mb-3 font-bold">부가서비스 이용</h4>
-                    <p class="text-blue-50 text-base md:text-lg leading-relaxed mb-8">구매 완료! 발행된 <strong>할인쿠폰이 정상적으로
-                            등록</strong>되어야 부가서비스를 이용하실 수 있습니다. 아래 사이트에서 최고의 학습 환경을 누리세요.</p>
+                    class="z-10 bg-green-500 w-14 h-14 rounded-full flex items-center justify-center text-white shrink-0 text-2xl font-black shadow-lg border-4 border-white animate-bounce">
+                    5</div>
+                <div class="ml-6 flex-1 card-green p-10 rounded-[35px] shadow-2xl relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 opacity-10 text-[150px] rotate-12">🥦</div>
+                    <h4 class="text-3xl font-black mb-6 text-green-800">갓생 완성! 🎉</h4>
+                    <p class="text-green-900 mb-8 font-bold leading-relaxed text-lg">
+                        이제 전자책과 함께 부가서비스를<br>
+                        마음껏 즐겨보세요! 공부 효율 UP! 🔥
+                    </p>
                     <a href="http://addon.hanbit.co.kr/" target="_blank"
-                        class="btn-primary flex items-center justify-center bg-white text-primary w-full py-4 rounded-xl shadow-md transition ease-in-out duration-300">
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-external-link text-lg shrink-0"></i>
-                            <span class="text-base md:text-lg whitespace-nowrap font-semibold">부가서비스 사이트 바로가기</span>
-                        </div>
+                        class="btn-bounce flex items-center justify-center bg-green-500 text-white w-full py-5 rounded-2xl font-black text-xl shadow-lg border-b-8 border-green-700 hover:translate-y-1 hover:border-b-4 transition-all">
+                        <i class="fa-solid fa-rocket mr-3"></i> 부가서비스 사이트 꼬우!
                     </a>
                 </div>
             </div>
@@ -237,17 +210,10 @@
         </div>
     </section>
 
-    <footer class="bg-gray-800 text-gray-300 py-16 px-5 text-center">
-        <p class="text-gray-500 text-xs uppercase tracking-[0.2em] mb-4 italic">Hanbit Publishing Network</p>
-        <p class="text-gray-400 text-sm leading-relaxed">
-            본 프로모션은 대학생들을 위한 특별한 기회입니다.<br>
-            궁금한 점은 언제든지 문의해주세요!
-        </p>
-        <div class="mt-8 text-lg space-x-4">
-            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube"></i></a>
-        </div>
+    <footer class="py-20 text-center bg-white mt-20 border-t-4 border-dashed border-gray-100">
+        <div class="text-4xl mb-6">💖 🎓 📘 💖</div>
+        <p class="text-gray-400 text-sm font-bold tracking-widest uppercase mb-2">Hanbit Publishing X Smart Students</p>
+        <p class="text-gray-500 font-bold">궁금한 건 언제든 문의주세요! 열공 파이팅! ✨</p>
     </footer>
 
 </body>
