@@ -18,14 +18,14 @@
             background-color: #fff9f0;
         }
 
-        /* 둥둥 떠다니는 애니메이션 */
+        /* 둥둥 떠다니는 애니메이션 (뱃지 등에 사용) */
         @keyframes float {
             0% {
                 transform: translateY(0px) rotate(0deg);
             }
 
             50% {
-                transform: translateY(-10px) rotate(5deg);
+                transform: translateY(-5px) rotate(2deg);
             }
 
             100% {
@@ -38,15 +38,13 @@
             display: inline-block;
         }
 
-        /* 가독성을 위해 톤을 조정한 무지개 그라데이션 헤더 */
+        /* 가독성을 높인 무지개 그라데이션 헤더 (배경 이모지 제거됨) */
         .header-rainbow {
-            /* 배경색 대비를 위해 기존보다 약간 더 진한 톤으로 변경 */
             background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 50%, #86a8e7 100%);
             border-radius: 0 0 50px 50px;
             box-shadow: 0 15px 30px rgba(255, 126, 95, 0.3);
         }
 
-        /* 글자 가독성을 위한 그림자 효과 */
         .text-shadow-pop {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
         }
@@ -94,7 +92,6 @@
             display: none;
         }
 
-        /* 버튼 통통 튀는 효과 */
         .btn-bounce:active {
             transform: scale(0.95);
         }
@@ -103,21 +100,17 @@
 
 <body>
 
-    <header class="header-rainbow py-14 px-5 text-center relative overflow-hidden">
-        <div class="absolute top-5 left-10 text-4xl emoji-float" style="animation-delay: 0s;">🎓</div>
-        <div class="absolute top-20 right-10 text-4xl emoji-float" style="animation-delay: 1s;">📖</div>
-        <div class="absolute bottom-5 left-20 text-4xl emoji-float" style="animation-delay: 0.5s;">✍️</div>
-
+    <header class="header-rainbow py-16 px-5 text-center relative overflow-hidden">
         <div class="max-w-screen-md mx-auto relative z-10">
             <span
-                class="bg-white px-4 py-1.5 rounded-full text-sm font-extrabold text-orange-600 mb-5 inline-block shadow-sm">
+                class="bg-white px-5 py-2 rounded-full text-sm font-extrabold text-orange-600 mb-6 inline-block shadow-sm emoji-float">
                 🔥 에브리타임 핫이슈 🔥
             </span>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-5 text-white text-shadow-pop tracking-tighter">
-                한빛+ 전자책 공동구매 <span class="emoji-float">🚀</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 text-white text-shadow-pop tracking-tighter">
+                한빛+ 전자책 공동구매 🚀
             </h1>
             <p
-                class="text-lg md:text-xl text-white font-extrabold text-shadow-pop bg-black/10 inline-block px-4 py-1 rounded-lg backdrop-blur-[2px]">
+                class="text-lg md:text-xl text-white font-extrabold text-shadow-pop bg-black/10 inline-block px-5 py-2 rounded-xl backdrop-blur-[2px]">
                 대학생 전용! 이번 학기 학점은 전자책으로 챙기자 🐥
             </p>
         </div>
@@ -126,12 +119,12 @@
     <section class="py-16 px-5 max-w-screen-md mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="card-pink p-10 rounded-[40px] shadow-xl text-center transform hover:-rotate-2 transition">
-                <div class="text-6xl mb-4">💸</div>
+                <div class="text-6xl mb-4 text-shadow-pop">💸</div>
                 <h3 class="text-2xl font-extrabold text-pink-600">통장 지킴이!<br><span class="text-5xl text-pink-500">15%
                         할인</span></h3>
             </div>
             <div class="card-blue p-10 rounded-[40px] shadow-xl text-center transform hover:rotate-2 transition">
-                <div class="text-6xl mb-4">🎁</div>
+                <div class="text-6xl mb-4 text-shadow-pop">🎁</div>
                 <h3 class="text-2xl font-extrabold text-blue-600">학습 꿀템들!<br><span class="text-5xl text-blue-500">자료
                         무료</span></h3>
             </div>
@@ -150,7 +143,7 @@
                     class="z-10 bg-yellow-400 w-14 h-14 rounded-full flex items-center justify-center text-white shrink-0 text-2xl font-black shadow-lg border-4 border-white">
                     1</div>
                 <div class="ml-6 flex-1 card-yellow p-8 rounded-[30px] shadow-lg">
-                    <h4 class="text-2xl font-extrabold mb-4 text-yellow-700">정보 입력하기 📝</h4>
+                    <h4 class="text-2xl font-extrabold mb-4 text-yellow-700 text-shadow-pop">정보 입력하기 📝</h4>
                     <p class="text-yellow-900 mb-8 font-bold leading-relaxed">
                         아래 버튼을 눌러 공동구매 신청서를 작성해주세요!<br>
                         정보를 잘 적어야 쿠폰이 정확히 배송됩니다 🚚
@@ -169,7 +162,7 @@
                     2</div>
                 <div class="ml-6 flex-1 card-pink p-8 rounded-[30px] shadow-lg">
                     <h4 class="text-2xl font-extrabold mb-2 text-pink-700">쿠폰 도착! 💌</h4>
-                    <p class="text-pink-900 font-bold">작성하신 연락처로 할인 쿠폰이 슝~ 날아갑니다.</p>
+                    <p class="text-pink-900 font-bold">작성하신 번호로 할인 쿠폰이 슝~ 날아갑니다.</p>
                 </div>
             </div>
 
@@ -178,7 +171,7 @@
                     class="z-10 bg-purple-400 w-14 h-14 rounded-full flex items-center justify-center text-white shrink-0 text-2xl font-black shadow-lg border-4 border-white">
                     3</div>
                 <div class="ml-6 flex-1 card-purple p-8 rounded-[30px] shadow-lg">
-                    <h4 class="text-2xl font-extrabold mb-2 text-purple-700">회원가입 하기 👤</h4>
+                    <h4 class="text-2xl font-extrabold mb-2 text-purple-700 text-shadow-pop">회원가입 하기 👤</h4>
                     <p class="text-purple-900 font-bold mb-4">한빛+ 사이트에 가입하고 로그인해주세요!</p>
                     <a href="https://www.hanbit.co.kr/" target="_blank" class="text-purple-600 underline font-black">한빛
                         공식몰 이동하기 💨</a>
@@ -191,7 +184,7 @@
                     4</div>
                 <div class="ml-6 flex-1 card-blue p-8 rounded-[30px] shadow-lg">
                     <h4 class="text-2xl font-extrabold mb-2 text-blue-700">할인 구매! 🛒</h4>
-                    <p class="text-blue-900 font-bold">쿠폰을 등록하고 저렴하게 구매하세요!</p>
+                    <p class="text-blue-900 font-bold">마이페이지에서 쿠폰을 등록하고 저렴하게 구매하세요!</p>
                 </div>
             </div>
 
@@ -201,7 +194,7 @@
                     5</div>
                 <div class="ml-6 flex-1 card-green p-10 rounded-[35px] shadow-2xl relative overflow-hidden">
                     <div class="absolute -right-10 -bottom-10 opacity-10 text-[150px] rotate-12">🥦</div>
-                    <h4 class="text-3xl font-black mb-6 text-green-800">갓생 완성! 🎉</h4>
+                    <h4 class="text-3xl font-black mb-6 text-green-800 text-shadow-pop">갓생 완성! 🎉</h4>
                     <p class="text-green-900 mb-8 font-bold leading-relaxed text-lg">
                         이제 전자책과 함께 부가서비스를<br>
                         마음껏 즐겨보세요! 공부 효율 UP! 🔥
