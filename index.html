@@ -16,7 +16,6 @@
             word-break: keep-all;
             color: #2d3748;
             background-color: #fff9f0;
-            /* 따뜻한 아이보리 파스텔 배경 */
         }
 
         /* 둥둥 떠다니는 애니메이션 */
@@ -39,11 +38,17 @@
             display: inline-block;
         }
 
-        /* 무지개빛 그라데이션 헤더 */
+        /* 가독성을 위해 톤을 조정한 무지개 그라데이션 헤더 */
         .header-rainbow {
-            background: linear-gradient(120deg, #ff9a9e 0%, #fecfef 50%, #a1c4fd 100%);
+            /* 배경색 대비를 위해 기존보다 약간 더 진한 톤으로 변경 */
+            background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 50%, #86a8e7 100%);
             border-radius: 0 0 50px 50px;
-            box-shadow: 0 15px 30px rgba(255, 154, 158, 0.2);
+            box-shadow: 0 15px 30px rgba(255, 126, 95, 0.3);
+        }
+
+        /* 글자 가독성을 위한 그림자 효과 */
+        .text-shadow-pop {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
         }
 
         /* 카드별 포인트 컬러 */
@@ -80,7 +85,7 @@
             top: 60px;
             bottom: -40px;
             width: 4px;
-            background: linear-gradient(to bottom, #ff9a9e, #a1c4fd);
+            background: linear-gradient(to bottom, #ff7e5f, #86a8e7);
             z-index: 0;
             border-radius: 2px;
         }
@@ -98,20 +103,21 @@
 
 <body>
 
-    <header class="header-rainbow py-12 px-5 text-center relative overflow-hidden">
+    <header class="header-rainbow py-14 px-5 text-center relative overflow-hidden">
         <div class="absolute top-5 left-10 text-4xl emoji-float" style="animation-delay: 0s;">🎓</div>
         <div class="absolute top-20 right-10 text-4xl emoji-float" style="animation-delay: 1s;">📖</div>
         <div class="absolute bottom-5 left-20 text-4xl emoji-float" style="animation-delay: 0.5s;">✍️</div>
 
         <div class="max-w-screen-md mx-auto relative z-10">
             <span
-                class="bg-white/40 backdrop-blur-sm px-4 py-1 rounded-full text-sm font-bold text-pink-600 mb-4 inline-block">
+                class="bg-white px-4 py-1.5 rounded-full text-sm font-extrabold text-orange-600 mb-5 inline-block shadow-sm">
                 🔥 에브리타임 핫이슈 🔥
             </span>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-white drop-shadow-md">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-5 text-white text-shadow-pop tracking-tighter">
                 한빛+ 갓생 공구 <span class="emoji-float">🚀</span>
             </h1>
-            <p class="text-lg md:text-xl text-white font-bold opacity-90">
+            <p
+                class="text-lg md:text-xl text-white font-extrabold text-shadow-pop bg-black/10 inline-block px-4 py-1 rounded-lg backdrop-blur-[2px]">
                 대학생 전용! 이번 학기 학점은 전자책으로 챙기자 🐥
             </p>
         </div>
