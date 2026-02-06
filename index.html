@@ -72,6 +72,25 @@
             background-color: #f3f0ff;
         }
 
+        /* 입력창 스타일 */
+        .input-field {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 12px;
+            border-radius: 15px;
+            border: 2px solid #ffec99;
+            background-color: white;
+            font-size: 16px;
+            font-weight: 600;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .input-field:focus {
+            border-color: #f59e0b;
+            box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1);
+        }
+
         .step-line::before {
             content: '';
             position: absolute;
@@ -97,43 +116,41 @@
 <body>
 
     <header class="header-rainbow py-16 px-5 text-center relative overflow-hidden">
-        <div class="max-w-screen-md mx-auto relative z-10">
+        <div class="max-w-screen-md mx-auto relative z-10 text-white">
             <span
                 class="bg-white px-5 py-2 rounded-full text-sm font-extrabold text-orange-600 mb-6 inline-block shadow-sm emoji-float">
                 🔥 에브리타임 핫이슈 🔥
             </span>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 text-white text-shadow-pop tracking-tighter">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 text-shadow-pop tracking-tighter">
                 한빛+ 갓생 공구 🚀
             </h1>
             <p
-                class="text-lg md:text-xl text-white font-extrabold text-shadow-pop bg-black/10 inline-block px-5 py-2 rounded-xl backdrop-blur-[2px]">
+                class="text-lg md:text-xl font-extrabold text-shadow-pop bg-black/10 inline-block px-5 py-2 rounded-xl backdrop-blur-[2px]">
                 대학생 전용! 이번 학기 학점은 전자책으로 챙기자 🐥
             </p>
         </div>
     </header>
 
     <section class="py-16 px-5 max-w-screen-lg mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch text-center">
             <div
-                class="card-pink p-8 rounded-[40px] shadow-xl text-center transform hover:-rotate-2 transition flex flex-col justify-center">
+                class="card-pink p-8 rounded-[40px] shadow-xl flex flex-col justify-center transform hover:-rotate-2 transition">
                 <div class="text-5xl mb-4 text-shadow-pop">💸</div>
                 <h3 class="text-xl font-extrabold text-pink-600">통장 지킴이!<br><span class="text-4xl text-pink-500">10%
                         할인</span></h3>
             </div>
-
             <div
-                class="card-yellow p-8 rounded-[40px] shadow-2xl text-center transform hover:scale-105 transition z-10 flex flex-col justify-center border-yellow-300">
+                class="card-yellow p-8 rounded-[40px] shadow-2xl flex flex-col justify-center border-yellow-300 transform hover:scale-105 transition z-10">
                 <div class="text-5xl mb-3 text-shadow-pop">🏗️</div>
-                <p class="text-yellow-600 text-sm font-extrabold mb-1 tracking-tighter">2026 한빛 빌드업</p>
-                <h3 class="text-3xl md:text-4xl font-extrabold text-yellow-700 mb-3 leading-tight">30일의 기적 ✨</h3>
+                <p class="text-yellow-600 text-sm font-extrabold mb-1 tracking-tighter uppercase">2026 한빛 빌드업</p>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-yellow-700 mb-3">30일의 기적 ✨</h3>
                 <p class="text-sm text-yellow-800 font-bold bg-white/50 py-2 rounded-xl border border-yellow-200">
                     20종 무료 대여 + 로드맵<br>
                     <span class="text-xs text-yellow-600 font-extrabold">03.02 ~ 03.31 신청 가능!</span>
                 </p>
             </div>
-
             <div
-                class="card-blue p-8 rounded-[40px] shadow-xl text-center transform hover:rotate-2 transition flex flex-col justify-center">
+                class="card-blue p-8 rounded-[40px] shadow-xl flex flex-col justify-center transform hover:rotate-2 transition">
                 <div class="text-5xl mb-4 text-shadow-pop">🎁</div>
                 <h3 class="text-xl font-extrabold text-blue-600">학습 꿀템!<br><span
                         class="text-3xl md:text-4xl text-blue-500 leading-tight">추가 연습문제<br>무료 제공</span></h3>
@@ -153,16 +170,25 @@
                     class="z-10 bg-yellow-400 w-14 h-14 rounded-full flex items-center justify-center text-white shrink-0 text-2xl font-black shadow-lg border-4 border-white">
                     1</div>
                 <div class="ml-6 flex-1 card-yellow p-8 rounded-[30px] shadow-lg">
-                    <h4 class="text-2xl font-extrabold mb-4 text-yellow-700 text-shadow-pop">정보 입력하기 📝</h4>
-                    <p class="text-yellow-900 mb-8 font-bold leading-relaxed">
-                        아래 버튼을 눌러 공동구매 신청서를 작성해주세요!<br>
-                        정보를 잘 적어야 쿠폰이 정확히 배송됩니다 🚚
-                    </p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6jxQDC7o5dFXdtan9DhgQlNQJYmuuQqYwLHSeGafuzIA1og/viewform?usp=header"
-                        target="_blank"
-                        class="btn-bounce flex items-center justify-center bg-yellow-400 text-yellow-900 w-full py-5 rounded-2xl font-black text-xl shadow-lg border-b-8 border-yellow-600 hover:translate-y-1 hover:border-b-4 transition-all">
-                        <i class="fa-solid fa-hand-pointer mr-3"></i> 신청서 쓰러 가기!
-                    </a>
+                    <h4 class="text-2xl font-extrabold mb-4 text-yellow-700">정보 입력하기 📝</h4>
+                    <p class="text-yellow-900 mb-6 font-bold leading-relaxed">페이지 이동 없이 바로 신청하세요!</p>
+
+                    <form id="g-form">
+                        <input type="text" name="학교" placeholder="🏫 대학교 이름을 입력하세요" class="input-field" required>
+                        <input type="text" name="이름" placeholder="👤 신청자 성함" class="input-field" required>
+                        <input type="tel" name="전화번호" placeholder="📱 연락처 (숫자만 입력)" class="input-field" required>
+                        <input type="text" name="신청도서명" placeholder="📘 도서명을 정확히 적어주세요" class="input-field" required>
+                        <input type="number" name="예상구매부수" placeholder="🔢 예상 구매 부수 (숫자)" class="input-field" required>
+
+                        <button type="submit" id="submitBtn"
+                            class="btn-bounce w-full py-5 rounded-2xl bg-yellow-400 text-yellow-900 font-black text-xl shadow-lg border-b-8 border-yellow-600 hover:translate-y-1 hover:border-b-4 transition-all">
+                            🚀 신청 완료하기!
+                        </button>
+                    </form>
+                    <div id="successBox"
+                        class="hidden mt-6 p-4 bg-green-100 border-2 border-green-400 rounded-2xl text-center">
+                        <p class="text-green-700 font-black">✅ 신청이 완료되었습니다!<br>시트에서 확인해 주세요. ✨</p>
+                    </div>
                 </div>
             </div>
 
@@ -181,7 +207,7 @@
                     class="z-10 bg-purple-400 w-14 h-14 rounded-full flex items-center justify-center text-white shrink-0 text-2xl font-black shadow-lg border-4 border-white">
                     3</div>
                 <div class="ml-6 flex-1 card-purple p-8 rounded-[30px] shadow-lg">
-                    <h4 class="text-2xl font-extrabold mb-2 text-purple-700 text-shadow-pop">회원가입 하기 👤</h4>
+                    <h4 class="text-2xl font-extrabold mb-2 text-purple-700">회원가입 하기 👤</h4>
                     <p class="text-purple-900 font-bold mb-4">한빛+ 사이트에 가입하고 로그인해주세요!</p>
                     <a href="https://www.hanbit.co.kr/" target="_blank" class="text-purple-600 underline font-black">한빛
                         공식몰 이동하기 💨</a>
@@ -202,10 +228,11 @@
                 <div
                     class="z-10 bg-green-500 w-14 h-14 rounded-full flex items-center justify-center text-white shrink-0 text-2xl font-black shadow-lg border-4 border-white animate-bounce">
                     5</div>
-                <div class="ml-6 flex-1 card-green p-10 rounded-[35px] shadow-2xl relative overflow-hidden">
+                <div
+                    class="ml-6 flex-1 card-green p-10 rounded-[35px] shadow-2xl relative overflow-hidden text-green-900 font-bold">
                     <div class="absolute -right-10 -bottom-10 opacity-10 text-[150px] rotate-12">🥦</div>
-                    <h4 class="text-3xl font-black mb-6 text-green-800 text-shadow-pop">갓생 완성! 🎉</h4>
-                    <p class="text-green-900 mb-8 font-bold leading-relaxed text-lg">
+                    <h4 class="text-3xl font-black mb-6 text-green-800">갓생 완성! 🎉</h4>
+                    <p class="mb-8 leading-relaxed text-lg">
                         이제 전자책과 함께 부가서비스를<br>
                         마음껏 즐겨보세요! 공부 효율 UP! 🔥
                     </p>
@@ -220,10 +247,35 @@
     </section>
 
     <footer class="py-20 text-center bg-white mt-20 border-t-4 border-dashed border-gray-100">
-        <div class="text-4xl mb-6">💖 🎓 📘 💖</div>
+        <div class="text-4xl mb-6 font-bold">💖 🎓 📘 💖</div>
         <p class="text-gray-400 text-sm font-bold tracking-widest uppercase mb-2">Hanbit Publishing X Smart Students</p>
         <p class="text-gray-500 font-bold">궁금한 건 언제든 문의주세요! 열공 파이팅! ✨</p>
     </footer>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzH7HHholEcvx48Lg_uxr6WmeRD5E7tP0__GrbonYUlodmUtRG88KGtDMJcObLAHQw/exec'
+        const form = document.getElementById('g-form')
+        const btn = document.getElementById('submitBtn')
+        const successBox = document.getElementById('successBox')
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            btn.disabled = true
+            btn.innerText = '📡 신청 정보 전송 중...'
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    btn.style.display = 'none'
+                    successBox.classList.remove('hidden')
+                    form.reset()
+                })
+                .catch(error => {
+                    alert('앗! 오류가 발생했어요. 다시 한번 시도해 주세요!')
+                    btn.disabled = false
+                    btn.innerText = '🚀 신청 완료하기!'
+                })
+        })
+    </script>
 
 </body>
 
