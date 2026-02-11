@@ -154,17 +154,19 @@
         <div class="flex flex-col lg:flex-row items-center justify-center gap-6">
 
             <!-- [메인 주인공 카드] -->
-            <div class="relative w-full lg:w-2/5 group">
-                <!-- 요청에 따라 문구 수정: STEP 1. 구매하기 -> 전자책 공동구매 하기 -->
+            <!-- 박스 크기를 줄이고(lg:w-[32%]), 오른쪽으로 소폭 이동(lg:ml-10) -->
+            <div class="relative w-full lg:w-[32%] lg:ml-10 group">
+                <!-- 문구 수정: 전자책 공동구매 하기 -> 전자책 공동구매 -->
                 <div
-                    class="absolute -top-6 -left-6 bg-orange-500 text-white px-6 py-2 rounded-2xl font-black shadow-lg z-20 animate-bounce">
-                    전자책 공동구매 하기
+                    class="absolute -top-6 -left-4 bg-orange-500 text-white px-6 py-2 rounded-2xl font-black shadow-lg z-20 animate-bounce">
+                    전자책 공동구매
                 </div>
+                <!-- 패딩 p-10 -> p-8, 최소 높이 400px -> 360px로 축소 -->
                 <div
-                    class="card-pink p-10 rounded-[50px] shadow-2xl flex flex-col justify-center items-center text-center transform hover:scale-105 transition duration-500 border-8 border-white min-h-[400px]">
-                    <div class="text-8xl mb-6 text-shadow-pop">💸</div>
+                    class="card-pink p-8 rounded-[50px] shadow-2xl flex flex-col justify-center items-center text-center transform hover:scale-105 transition duration-500 border-8 border-white min-h-[360px]">
+                    <div class="text-7xl mb-4 text-shadow-pop">💸</div>
                     <h3 class="text-2xl font-black text-pink-600 italic leading-tight">전자책 구매 시<br>
-                        <span class="text-6xl md:text-7xl text-pink-500 block mt-4 not-italic font-black">10% 할인</span>
+                        <span class="text-5xl md:text-6xl text-pink-500 block mt-4 not-italic font-black">10% 할인</span>
                     </h3>
                     <p class="mt-6 text-pink-700 bg-white px-6 py-2 rounded-full text-sm font-black shadow-sm">공동구매 메인
                         혜택</p>
@@ -179,7 +181,7 @@
 
             <!-- [덤 혜택 박스 그룹] -->
             <div
-                class="w-full lg:w-3/5 bg-white/40 p-8 rounded-[60px] border-4 border-dashed border-orange-200 relative">
+                class="w-full lg:w-[58%] bg-white/40 p-8 rounded-[60px] border-4 border-dashed border-orange-200 relative">
                 <div
                     class="absolute -top-5 left-1/2 -translate-x-1/2 bg-orange-400 text-white px-8 py-2 rounded-full font-black shadow-md z-10">
                     🎁 구매 시 드리는 추가 선물(덤)
@@ -200,7 +202,8 @@
                         class="card-yellow p-8 rounded-[40px] shadow-xl flex flex-col justify-center items-center text-center border-yellow-300 transform hover:-rotate-2 transition min-h-[300px]">
                         <div class="text-5xl mb-3 text-shadow-pop">📱</div>
                         <h3 class="text-2xl font-extrabold text-yellow-700 mb-2 leading-tight">한빛+ 앱 설치 혜택</h3>
-                        <p class="text-[10px] text-orange-600 font-extrabold mb-1">※ 아래 혜택은 전자책(E-Book) 제공</p>
+                        <!-- 문구 수정 및 폰트 크기 확대 (text-[10px] -> text-[13px]) -->
+                        <p class="text-[13px] text-orange-600 font-extrabold mb-1">※ 아래 혜택은 전자책에 해당 합니다.</p>
                         <div
                             class="w-full text-sm text-yellow-800 font-bold bg-white/50 py-3 rounded-xl border border-yellow-200 leading-normal shadow-sm">
                             <p class="mb-1">베스트셀러 1권 <span class="text-xs text-orange-600 font-extrabold">(30일
