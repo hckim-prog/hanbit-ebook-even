@@ -149,40 +149,67 @@
         </div>
     </header>
 
-    <section class="py-16 px-5 max-w-screen-lg mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch text-center">
+    <!-- 혜택 안내 섹션 -->
+    <section class="py-16 px-5 max-w-screen-xl mx-auto">
+        <div class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-2">
+
+            <!-- 1. 메인 혜택: 10% 할인 -->
             <div
-                class="card-pink p-8 rounded-[40px] shadow-xl flex flex-col justify-center transform hover:-rotate-2 transition">
-                <div class="text-5xl mb-4 text-shadow-pop">💸</div>
-                <h3 class="text-xl font-extrabold text-pink-600">통장 지킴이!<br><span class="text-4xl text-pink-500">10%
-                        할인</span></h3>
+                class="card-pink p-8 rounded-[40px] shadow-2xl flex flex-col justify-center items-center text-center transform hover:-rotate-2 transition w-full lg:flex-1 h-full min-h-[320px]">
+                <div class="text-6xl mb-4 text-shadow-pop">💸</div>
+                <h3 class="text-xl font-extrabold text-pink-600 italic">전자책 구매시<br>
+                    <span class="text-5xl text-pink-500 block mt-2 not-italic">10% 할인</span>
+                </h3>
+                <span class="mt-4 px-4 py-1 bg-pink-200 text-pink-700 text-xs rounded-full font-black">MAIN EVENT</span>
             </div>
-            <div
-                class="card-yellow p-8 rounded-[40px] shadow-2xl flex flex-col justify-center border-yellow-300 transform hover:scale-105 transition z-10">
-                <div class="text-5xl mb-3 text-shadow-pop">🏗️</div>
-                <p class="text-yellow-600 text-sm font-extrabold mb-1 tracking-tighter uppercase">2026 한빛 빌드업</p>
-                <h3 class="text-3xl md:text-4xl font-extrabold text-yellow-700 mb-3 leading-tight">30일의 기적 ✨</h3>
-                <p class="text-sm text-yellow-800 font-bold bg-white/50 py-2 rounded-xl border border-yellow-200">
-                    20종 무료 대여 + 로드맵<br>
-                    <span class="text-xs text-yellow-600 font-extrabold">03.02 ~ 03.31 신청 가능!</span>
-                </p>
+
+            <!-- 첫 번째 연결 기호 -->
+            <div class="flex items-center justify-center py-4 lg:py-0 lg:px-4">
+                <i class="fa-solid fa-arrow-right text-5xl text-orange-500 font-black opacity-80"></i>
             </div>
+
+            <!-- 2. 추가 혜택: 연습문제 -->
             <div
-                class="card-blue p-8 rounded-[40px] shadow-xl flex flex-col justify-center transform hover:rotate-2 transition">
+                class="card-blue p-8 rounded-[40px] shadow-xl flex flex-col justify-center items-center text-center transform hover:rotate-2 transition w-full lg:flex-1 h-full min-h-[320px]">
                 <div class="text-5xl mb-4 text-shadow-pop">🎁</div>
-                <h3 class="text-xl font-extrabold text-blue-600">학습 꿀템!<br><span
-                        class="text-3xl md:text-4xl text-blue-500 leading-tight">추가 연습문제<br>무료 제공</span></h3>
+                <h3 class="text-xl font-extrabold text-blue-600">학습 꿀템!<br>
+                    <span class="text-3xl text-blue-500 leading-tight block mt-2">추가 연습문제<br>무료 제공</span>
+                </h3>
+            </div>
+
+            <!-- 두 번째 연결 기호 -->
+            <div class="flex items-center justify-center py-4 lg:py-0 lg:px-4">
+                <i class="fa-solid fa-plus text-4xl text-orange-400 font-black opacity-60"></i>
+            </div>
+
+            <!-- 3. 빌드업 이벤트 -->
+            <div
+                class="card-yellow p-8 rounded-[40px] shadow-xl flex flex-col justify-center items-center text-center border-yellow-300 transform hover:scale-105 transition w-full lg:flex-1 h-full min-h-[320px]">
+                <div class="text-5xl mb-3 text-shadow-pop">📱</div>
+                <p class="text-yellow-600 text-sm font-extrabold mb-1 tracking-tighter uppercase">한빛+ 앱 설치 혜택</p>
+                <h3 class="text-3xl font-extrabold text-yellow-700 mb-3 leading-tight">2026 빌드업</h3>
+                <div
+                    class="w-full text-base text-yellow-800 font-bold bg-white/50 py-4 rounded-xl border border-yellow-200 leading-relaxed shadow-sm">
+                    <p class="mb-1">베스트셀러 1권 <span class="text-sm text-orange-600 font-extrabold">(30일 대여)</span></p>
+                    <p class="mb-3">AI & IT 활용서 5종 <span class="text-sm text-orange-600 font-extrabold">(평생 소장)</span>
+                    </p>
+                    <span
+                        class="text-xs text-yellow-600 font-black bg-yellow-100 px-3 py-1 rounded-full border border-yellow-200">기간
+                        : 03.02 ~ 03.31</span>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- 프로세스 섹션 (5단계 -> 4단계 수정 및 통합) -->
     <section class="py-10 px-5 max-w-screen-md mx-auto">
         <h2 class="text-3xl text-center font-extrabold mb-20 text-gray-800">
-            🌈 신청부터 이용까지 5단계!
+            🌈 신청부터 이용까지 4단계!
         </h2>
 
         <div class="relative space-y-16">
 
+            <!-- Step 1 -->
             <div class="relative flex items-start step-line">
                 <div
                     class="z-10 bg-yellow-400 w-14 h-14 rounded-full flex items-center justify-center text-white shrink-0 text-2xl font-black shadow-lg border-4 border-white">
@@ -221,6 +248,7 @@
                 </div>
             </div>
 
+            <!-- Step 2 -->
             <div class="relative flex items-start step-line">
                 <div
                     class="z-10 bg-pink-400 w-14 h-14 rounded-full flex items-center justify-center text-white shrink-0 text-2xl font-black shadow-lg border-4 border-white">
@@ -231,32 +259,27 @@
                 </div>
             </div>
 
+            <!-- Step 3 (통합된 단계) -->
             <div class="relative flex items-start step-line">
                 <div
                     class="z-10 bg-purple-400 w-14 h-14 rounded-full flex items-center justify-center text-white shrink-0 text-2xl font-black shadow-lg border-4 border-white">
                     3</div>
                 <div class="ml-6 flex-1 card-purple p-8 rounded-[30px] shadow-lg">
-                    <h4 class="text-2xl font-extrabold mb-2 text-purple-700 text-shadow-pop">회원가입 하기 👤</h4>
-                    <p class="text-purple-900 font-bold mb-4">한빛+ 사이트에 가입하고 로그인해주세요!</p>
+                    <h4 class="text-2xl font-extrabold mb-2 text-purple-700 text-shadow-pop">회원 가입 및 쿠폰 등록하기 👤</h4>
+                    <p class="text-purple-900 font-bold mb-4 leading-relaxed">
+                        한빛+ 사이트 회원 가입 후 쿠폰을 등록해 주세요!<br>
+                        마이페이지에서 구매하신 도서를 즉시 열람하실 수 있습니다.
+                    </p>
                     <a href="https://www.hanbit.co.kr/" target="_blank" class="text-purple-600 underline font-black">한빛
                         공식몰 이동하기 💨</a>
                 </div>
             </div>
 
-            <div class="relative flex items-start step-line">
-                <div
-                    class="z-10 bg-blue-400 w-14 h-14 rounded-full flex items-center justify-center text-white shrink-0 text-2xl font-black shadow-lg border-4 border-white">
-                    4</div>
-                <div class="ml-6 flex-1 card-blue p-8 rounded-[30px] shadow-lg">
-                    <h4 class="text-2xl font-extrabold mb-2 text-blue-700">할인 구매! 🛒</h4>
-                    <p class="text-blue-900 font-bold">마이페이지에서 쿠폰을 등록하고 저렴하게 구매하세요!</p>
-                </div>
-            </div>
-
+            <!-- Step 4 (번호 조정) -->
             <div class="relative flex items-start step-last">
                 <div
                     class="z-10 bg-green-500 w-14 h-14 rounded-full flex items-center justify-center text-white shrink-0 text-2xl font-black shadow-lg border-4 border-white animate-bounce">
-                    5</div>
+                    4</div>
                 <div class="ml-6 flex-1 card-green p-10 rounded-[35px] shadow-2xl relative overflow-hidden">
                     <div class="absolute -right-10 -bottom-10 opacity-10 text-[150px] rotate-12">🥦</div>
                     <h4 class="text-3xl font-black mb-6 text-green-800 text-shadow-pop">갓생 완성! 🎉</h4>
