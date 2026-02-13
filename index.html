@@ -72,7 +72,6 @@
             background-color: #f3f0ff;
         }
 
-        /* 입력창 및 확인창 스타일 */
         .input-field {
             width: 100%;
             padding: 14px;
@@ -149,26 +148,16 @@
         </div>
     </header>
 
-    <!-- 혜택 안내 섹션 (아이디어 3: 메인 + 덤 레이아웃) -->
+    <!-- 혜택 안내 섹션 (메인 + 덤 레이아웃) -->
     <section class="py-16 px-5 max-w-screen-xl mx-auto">
         <div class="flex flex-col lg:flex-row items-center justify-center gap-6">
 
             <!-- [메인 주인공 카드] -->
-<<<<<<< HEAD
             <div class="relative w-full lg:w-[32%] lg:ml-10 group">
-=======
-            <!-- 박스 크기를 줄이고(lg:w-[32%]), 오른쪽으로 소폭 이동(lg:ml-10) -->
-            <div class="relative w-full lg:w-[32%] lg:ml-10 group">
-                <!-- 문구 수정: 전자책 공동구매 하기 -> 전자책 공동구매 -->
->>>>>>> bef753dd9ac7bc48d7dd36aca34e9a41a75c408f
                 <div
-                    class="absolute -top-6 -left-4 bg-orange-500 text-white px-6 py-2 rounded-2xl font-black shadow-lg z-20 animate-bounce">
+                    class="absolute -top-6 -left-4 bg-orange-500 text-white px-6 py-2 rounded-2xl font-black shadow-lg z-20 animate-bounce text-sm">
                     전자책 공동구매
                 </div>
-<<<<<<< HEAD
-=======
-                <!-- 패딩 p-10 -> p-8, 최소 높이 400px -> 360px로 축소 -->
->>>>>>> bef753dd9ac7bc48d7dd36aca34e9a41a75c408f
                 <div
                     class="card-pink p-8 rounded-[50px] shadow-2xl flex flex-col justify-center items-center text-center transform hover:scale-105 transition duration-500 border-8 border-white min-h-[360px]">
                     <div class="text-7xl mb-4 text-shadow-pop">💸</div>
@@ -190,25 +179,18 @@
             <div
                 class="w-full lg:w-[58%] bg-white/40 p-8 rounded-[60px] border-4 border-dashed border-orange-200 relative">
                 <div
-                    class="absolute -top-5 left-1/2 -translate-x-1/2 bg-orange-400 text-white px-8 py-2 rounded-full font-black shadow-md z-10">
+                    class="absolute -top-5 left-1/2 -translate-x-1/2 bg-orange-400 text-white px-8 py-2 rounded-full font-black shadow-md z-10 whitespace-nowrap">
                     🎁 구매 시 드리는 추가 선물(덤)
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-<<<<<<< HEAD
-                    <!-- 선물 1: 연습문제 (텍스트 수정 반영) -->
-=======
                     <!-- 선물 1: 연습문제 -->
->>>>>>> bef753dd9ac7bc48d7dd36aca34e9a41a75c408f
                     <div
                         class="card-blue p-8 rounded-[40px] shadow-xl flex flex-col justify-center items-center text-center transform hover:rotate-2 transition min-h-[300px]">
                         <div class="text-5xl mb-4 text-shadow-pop">🎁</div>
                         <h3 class="text-xl font-extrabold text-blue-600">학습 꿀템!<br>
-<<<<<<< HEAD
-                            <span class="text-3xl text-blue-500 leading-tight block mt-2">추가 연습문제,<br>쉬운 해설서</span>
-=======
-                            <span class="text-3xl text-blue-500 leading-tight block mt-2">추가 연습문제<br>무료 제공</span>
->>>>>>> bef753dd9ac7bc48d7dd36aca34e9a41a75c408f
+                            <span class="text-3xl text-blue-500 leading-tight block mt-2 font-black">추가 연습문제,<br>쉬운
+                                해설서</span>
                         </h3>
                     </div>
 
@@ -217,11 +199,9 @@
                         class="card-yellow p-8 rounded-[40px] shadow-xl flex flex-col justify-center items-center text-center border-yellow-300 transform hover:-rotate-2 transition min-h-[300px]">
                         <div class="text-5xl mb-3 text-shadow-pop">📱</div>
                         <h3 class="text-2xl font-extrabold text-yellow-700 mb-2 leading-tight">한빛+ 앱 설치 혜택</h3>
-<<<<<<< HEAD
-=======
-                        <!-- 문구 수정 및 폰트 크기 확대 (text-[10px] -> text-[13px]) -->
->>>>>>> bef753dd9ac7bc48d7dd36aca34e9a41a75c408f
-                        <p class="text-[13px] text-orange-600 font-extrabold mb-1">※ 아래 혜택은 전자책에 해당 합니다.</p>
+                        <!-- 폰트 크기 조정 및 한 줄 유지 설정 -->
+                        <p class="text-[12px] md:text-[13px] text-orange-600 font-extrabold mb-1 whitespace-nowrap">※ 아래
+                            혜택은 전자책에 해당 합니다.</p>
                         <div
                             class="w-full text-sm text-yellow-800 font-bold bg-white/50 py-3 rounded-xl border border-yellow-200 leading-normal shadow-sm">
                             <p class="mb-1">베스트셀러 1권 <span class="text-xs text-orange-600 font-extrabold">(30일
@@ -229,8 +209,8 @@
                             <p class="mb-2">AI & IT 활용서 5종 <span class="text-xs text-orange-600 font-extrabold">(평생
                                     소장)</span></p>
                             <span
-                                class="text-[10px] text-yellow-600 font-black bg-yellow-100 px-2 py-0.5 rounded-full border border-yellow-200">03.02
-                                ~ 03.31</span>
+                                class="text-[10px] text-yellow-600 font-black bg-yellow-100 px-2 py-0.5 rounded-full border border-yellow-200">기간
+                                : 03.02 ~ 03.31</span>
                         </div>
                     </div>
                 </div>
@@ -238,14 +218,13 @@
         </div>
     </section>
 
-    <!-- 프로세스 섹션 -->
+    <!-- 프로세스 섹션 (4단계) -->
     <section class="py-10 px-5 max-w-screen-md mx-auto">
         <h2 class="text-3xl text-center font-extrabold mb-20 text-gray-800">
             🌈 신청부터 이용까지 4단계!
         </h2>
 
         <div class="relative space-y-16">
-
             <!-- Step 1 -->
             <div class="relative flex items-start step-line">
                 <div
@@ -253,7 +232,6 @@
                     1</div>
                 <div class="ml-6 flex-1 card-yellow p-8 rounded-[30px] shadow-lg">
                     <h4 class="text-2xl font-extrabold mb-4 text-yellow-700">정보 입력하기 📝</h4>
-
                     <form id="orderForm">
                         <p class="text-yellow-900 mb-6 font-bold leading-relaxed">페이지 이동 없이 바로 신청하세요!</p>
                         <input type="text" name="학교" placeholder="🏫 대학교 이름을 입력하세요" class="input-field" required>
@@ -261,22 +239,17 @@
                         <input type="tel" name="전화번호" placeholder="📱 연락처 (숫자만 입력)" class="input-field" required>
                         <input type="text" name="신청도서명" placeholder="📘 도서명을 정확히 적어주세요" class="input-field" required>
                         <input type="number" name="예상구매부수" placeholder="🔢 예상 구매 부수 (숫자)" class="input-field" required>
-
                         <button type="submit" id="submitBtn"
                             class="btn-bounce w-full py-5 rounded-2xl bg-yellow-400 text-yellow-900 font-black text-xl shadow-lg border-b-8 border-yellow-600 hover:translate-y-1 hover:border-b-4 transition-all">
                             🚀 신청 완료하기!
                         </button>
                     </form>
-
                     <div id="confirmBox" class="hidden">
                         <div class="bg-white/60 border-2 border-green-400 p-4 rounded-2xl mb-6 text-center">
                             <p class="text-green-700 font-black text-lg">✅ 신청이 완료되었습니다!</p>
                             <p class="text-green-600 text-sm font-bold">입력하신 정보를 확인해 주세요.</p>
                         </div>
-
-                        <div id="displayData" class="mb-6">
-                        </div>
-
+                        <div id="displayData" class="mb-6"></div>
                         <button onclick="editForm()"
                             class="btn-bounce w-full py-4 rounded-2xl bg-white text-orange-600 font-black border-2 border-orange-200 hover:bg-orange-50 transition-all shadow-sm">
                             ✏️ 정보 수정하기
@@ -330,7 +303,6 @@
                     </a>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -357,16 +329,13 @@
         const confirmBox = document.getElementById('confirmBox');
         const displayData = document.getElementById('displayData');
 
-        // [폼 제출 시]
         form.addEventListener('submit', e => {
             e.preventDefault();
             submitBtn.disabled = true;
             submitBtn.innerText = '📡 정보 전송 중...';
 
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    renderConfirmation();
-                })
+                .then(response => { renderConfirmation(); })
                 .catch(error => {
                     alert('앗! 전송 중에 오류가 발생했어요. 다시 한번 시도해 주세요!');
                     submitBtn.disabled = false;
@@ -374,12 +343,9 @@
                 });
         });
 
-        // [입력 정보 렌더링 함수]
         function renderConfirmation() {
             const formData = new FormData(form);
             let summaryHtml = '';
-
-            // 입력한 값들을 하나씩 꺼내서 확인창에 넣기
             for (let [key, value] of formData.entries()) {
                 summaryHtml += `
                     <div class="confirm-item">
@@ -387,22 +353,19 @@
                         <span class="font-extrabold text-slate-700">${value}</span>
                     </div>`;
             }
-
             displayData.innerHTML = summaryHtml;
-            form.classList.add('hidden'); // 입력창 숨기기
-            confirmBox.classList.remove('hidden'); // 확인창 보여주기
-            window.scrollTo({ top: form.offsetTop - 100, behavior: 'smooth' }); // 화면 위치 조정
+            form.classList.add('hidden');
+            confirmBox.classList.remove('hidden');
+            window.scrollTo({ top: form.offsetTop - 100, behavior: 'smooth' });
         }
 
-        // [수정하기 버튼 클릭 시]
         function editForm() {
             submitBtn.disabled = false;
             submitBtn.innerText = '🚀 정보 수정 후 다시 저장!';
-            confirmBox.classList.add('hidden'); // 확인창 숨기기
-            form.classList.remove('hidden'); // 입력창 다시 보여주기
+            confirmBox.classList.add('hidden');
+            form.classList.remove('hidden');
         }
     </script>
-
 </body>
 
 </html>
