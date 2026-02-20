@@ -148,73 +148,90 @@
         </div>
     </header>
 
-    <!-- 혜택 안내 섹션 (메인 + 덤 레이아웃) -->
-    <section class="py-16 px-5 max-w-screen-xl mx-auto">
-        <div class="flex flex-col lg:flex-row items-center justify-center gap-6">
+    <!-- 혜택 안내 섹션 -->
+    <section class="py-16 px-5 max-w-screen-2xl mx-auto">
+        <div class="flex flex-col lg:flex-row items-stretch justify-center gap-4 xl:gap-6">
 
-            <!-- [메인 주인공 카드] -->
-            <div class="relative w-full lg:w-[32%] lg:ml-10 group">
-                <div
-                    class="absolute -top-6 -left-4 bg-orange-500 text-white px-6 py-2 rounded-2xl font-black shadow-lg z-20 animate-bounce text-sm">
-                    전자책 공동구매
-                </div>
-                <div
-                    class="card-pink p-8 rounded-[50px] shadow-2xl flex flex-col justify-center items-center text-center transform hover:scale-105 transition duration-500 border-8 border-white min-h-[360px]">
-                    <div class="text-7xl mb-4 text-shadow-pop">💸</div>
-                    <h3 class="text-2xl font-black text-pink-600 italic leading-tight">전자책 구매 시<br>
-                        <span class="text-5xl md:text-6xl text-pink-500 block mt-4 not-italic font-black">10% 할인</span>
-                    </h3>
-                    <p class="mt-6 text-pink-700 bg-white px-6 py-2 rounded-full text-sm font-black shadow-sm">공동구매 메인
-                        혜택</p>
-                </div>
-            </div>
-
-            <!-- [화살표 연결자] -->
-            <div class="flex items-center justify-center py-4 lg:py-0">
-                <i
-                    class="fa-solid fa-arrow-right text-6xl text-orange-500 font-black opacity-80 rotate-90 lg:rotate-0"></i>
-            </div>
-
-            <!-- [덤 혜택 박스 그룹] -->
+            <!-- [즉시 혜택 그룹: 1번 + 2번 카드] -->
             <div
-                class="w-full lg:w-[58%] bg-white/40 p-8 rounded-[60px] border-4 border-dashed border-orange-200 relative">
+                class="lg:w-[62%] bg-white/50 p-6 md:p-8 rounded-[60px] border-4 border-orange-200 relative shadow-inner">
                 <div
-                    class="absolute -top-5 left-1/2 -translate-x-1/2 bg-orange-400 text-white px-8 py-2 rounded-full font-black shadow-md z-10 whitespace-nowrap">
-                    🎁 구매 시 드리는 추가 선물(덤)
+                    class="absolute -top-6 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-8 py-3 rounded-2xl font-black shadow-lg z-20 whitespace-nowrap">
+                    🤝 <span
+                        class="text-yellow-300 text-xl underline decoration-yellow-300 underline-offset-4 font-black">3인</span>
+                    이상 공구 시 즉시 드리는 혜택
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                    <!-- 선물 1: 연습문제 -->
+                <div class="flex flex-col md:flex-row items-stretch justify-center gap-4 mt-4 h-full">
+                    <!-- 1. 10% 할인 카드 -->
                     <div
-                        class="card-blue p-8 rounded-[40px] shadow-xl flex flex-col justify-center items-center text-center transform hover:rotate-2 transition min-h-[300px]">
+                        class="w-full md:w-0 flex-1 card-pink p-8 rounded-[50px] shadow-xl flex flex-col justify-center items-center text-center transform hover:scale-105 transition duration-500 border-4 border-white min-h-[340px] h-full min-w-0">
+                        <div class="text-7xl mb-4 text-shadow-pop">💸</div>
+                        <div class="text-4xl md:text-5xl text-pink-500 font-black">10% 할인</div>
+                    </div>
+
+                    <!-- 1번과 2번 사이: 플러스 기호 -->
+                    <div class="flex items-center justify-center py-2 md:py-0 shrink-0">
+                        <i class="fa-solid fa-plus text-4xl text-orange-400 font-black opacity-60"></i>
+                    </div>
+
+                    <!-- 2. 연습문제 카드 -->
+                    <div
+                        class="w-full md:w-0 flex-1 card-blue p-8 rounded-[50px] shadow-xl flex flex-col justify-center items-center text-center transform hover:rotate-2 transition min-h-[340px] h-full min-w-0">
                         <div class="text-5xl mb-4 text-shadow-pop">🎁</div>
                         <h3 class="text-xl font-extrabold text-blue-600">학습 꿀템!<br>
                             <span class="text-3xl text-blue-500 leading-tight block mt-2 font-black">추가 연습문제,<br>쉬운
                                 해설서</span>
                         </h3>
                     </div>
+                </div>
+            </div>
 
-                    <!-- 선물 2: 앱 설치 혜택 -->
+            <!-- 그룹 사이 연결 기호: 화살표 -->
+            <div class="flex items-center justify-center py-2 lg:py-0 shrink-0">
+                <i
+                    class="fa-solid fa-arrow-right text-4xl xl:text-5xl text-orange-400 font-black opacity-60 rotate-90 lg:rotate-0"></i>
+            </div>
+
+            <!-- [앱 런칭 혜택: 3번 카드] -->
+            <div
+                class="w-full lg:w-[32%] bg-yellow-50/50 p-6 md:p-8 rounded-[60px] border-4 border-dashed border-yellow-300 relative shadow-sm">
+                <div
+                    class="absolute -top-6 left-1/2 -translate-x-1/2 bg-yellow-400 text-yellow-900 px-8 py-3 rounded-2xl font-black shadow-lg z-20 whitespace-nowrap border-4 border-white">
+                    📱 한빛+ 앱 설치 이벤트
+                </div>
+
+                <div
+                    class="card-yellow p-8 rounded-[50px] shadow-xl flex flex-col justify-center items-center text-center border-yellow-200 transform hover:-rotate-2 transition min-h-[340px] h-full mt-4">
+                    <span
+                        class="bg-white/90 text-orange-600 px-6 py-2 rounded-full text-base font-black mb-4 border-2 border-orange-400 shadow-md animate-pulse whitespace-nowrap">
+                        🚀 3월 중순 앱 런칭 예정!
+                    </span>
+
+                    <div class="text-5xl mb-2 text-shadow-pop">📱</div>
+                    <h3 class="text-2xl font-extrabold text-yellow-700 mb-2 leading-tight">한빛+ 앱 설치 혜택</h3>
+
+                    <p class="text-[12px] md:text-[13px] text-orange-600 font-extrabold mb-1 whitespace-nowrap">※ 아래 혜택은
+                        전자책에 해당 합니다.</p>
+
                     <div
-                        class="card-yellow p-8 rounded-[40px] shadow-xl flex flex-col justify-center items-center text-center border-yellow-300 transform hover:-rotate-2 transition min-h-[300px]">
-                        <div class="text-5xl mb-3 text-shadow-pop">📱</div>
-                        <h3 class="text-2xl font-extrabold text-yellow-700 mb-2 leading-tight">한빛+ 앱 설치 혜택</h3>
-                        <!-- 폰트 크기 조정 및 한 줄 유지 설정 -->
-                        <p class="text-[12px] md:text-[13px] text-orange-600 font-extrabold mb-1 whitespace-nowrap">※ 아래
-                            혜택은 전자책에 해당 합니다.</p>
-                        <div
-                            class="w-full text-sm text-yellow-800 font-bold bg-white/50 py-3 rounded-xl border border-yellow-200 leading-normal shadow-sm">
-                            <p class="mb-1">베스트셀러 1권 <span class="text-xs text-orange-600 font-extrabold">(30일
-                                    대여)</span></p>
-                            <p class="mb-2">AI & IT 활용서 5종 <span class="text-xs text-orange-600 font-extrabold">(평생
-                                    소장)</span></p>
-                            <span
-                                class="text-[10px] text-yellow-600 font-black bg-yellow-100 px-2 py-0.5 rounded-full border border-yellow-200">기간
-                                : 03.02 ~ 03.31</span>
-                        </div>
+                        class="w-full text-sm text-yellow-800 font-bold bg-white/50 py-4 rounded-xl border border-yellow-200 leading-normal shadow-sm">
+                        <p class="mb-1">베스트셀러 1권 <span class="text-xs text-orange-600 font-extrabold">(30일 대여)</span>
+                        </p>
+                        <p class="mb-2">AI & IT 활용서 5종 <span class="text-xs text-orange-600 font-extrabold">(평생
+                                소장)</span></p>
+                    </div>
+
+                    <div class="mt-5 px-2">
+                        <!-- 안내 문구 수정: whitespace-nowrap 추가 및 폰트 크기/색상 가독성 강화 -->
+                        <span
+                            class="text-[14px] md:text-[15px] text-yellow-700 font-black bg-yellow-100 px-5 py-2 rounded-full border border-yellow-300 shadow-sm whitespace-nowrap">
+                            앱 런칭 시 문자로 개별 안내 드립니다.
+                        </span>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
